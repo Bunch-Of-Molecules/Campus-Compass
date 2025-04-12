@@ -1,68 +1,81 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
+  font-family: sans-serif;
+  background-color: #fffcf2;
+}
+
+.ribbon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #252422;
+  color: #ccc5b9;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+  justify-content: space-between;
+  box-sizing: border-box;
+
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.mapLayer{
+  position: absolute;
+  top: 90px;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  z-index: 1;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+  border: 5px solid #403d39;
+  border-radius: 5px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.searchWrapper{
+  position: relative;
+  display: flex;
+  align-items: center;
 }
+
+.searchBar{
+  height: 42px;
+  width: 350px;
+  padding: 0 14px;
+  border-radius: 21px;
+  border: #ccc5b9 solid 2px;
+  font-size: 15px;
+  color: #fffcf2;
+  background-color: rgba(20,21,19,0.7);
+  z-index: 1;
+
+}
+
+.searchIcon{
+  position: absolute;
+  right: 21px;
+  color: #ccc5b9;
+  font-size: 15px;
+  pointer-events: none;
+
+  cursor: pointer;
+  transition: color .2s ease;
+
+  z-index: 20;
+}
+
+.searchIcon:hover{
+  color: #000;
+}
+

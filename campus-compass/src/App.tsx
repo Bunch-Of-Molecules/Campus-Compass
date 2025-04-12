@@ -1,7 +1,16 @@
-import Message from './Message';
+import './App.css';
+import MapView from './Components/MapView';
+import Ribbon from './Components/Ribbon';
 
-function First(){
-    return <div><Message /></div>
+function App() {
+    return (
+        <div className="appContainer">
+            <Ribbon />
+            <MapView />
+
+        </div>
+
+    );
 }
 
-export default First;
+export default App;
