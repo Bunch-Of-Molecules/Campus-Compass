@@ -1,7 +1,7 @@
 import Message from './Message';
 
-function SarthakRandi(){
+function First(){
     return <div><Message /></div>
 }
 
-export default SarthakRandi;
+export default First;
