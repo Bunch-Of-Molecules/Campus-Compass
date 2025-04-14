@@ -12,12 +12,12 @@ const Ribbon = () => {
     return (
         <div className="ribbon">
             <h1>Campus Compass</h1>
-            <div className="searchWrapper">
-            <FaSearch className='searchIcon' />
+            <div className="search-wrapper">
+            <FaSearch className='search-icon' />
             <input
                 type="text"
                 placeholder="Search..."
-                className="searchBar"
+                className="search-bar"
 
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') handleSearch();

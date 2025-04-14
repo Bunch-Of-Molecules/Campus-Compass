@@ -30,7 +30,7 @@ body {
 
 }
 
-.mapLayer{
+.map-layer{
   position: absolute;
   top: 90px;
   left: 10px;
@@ -43,13 +43,13 @@ body {
   border-radius: 5px;
 }
 
-.searchWrapper{
+.search-wrapper{
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.searchBar{
+.search-bar{
   height: 42px;
   width: 350px;
   padding: 0 14px;
@@ -62,7 +62,7 @@ body {
 
 }
 
-.searchIcon{
+.search-icon{
   position: absolute;
   right: 21px;
   color: #ccc5b9;
@@ -79,3 +79,113 @@ body {
   color: #000;
 }
 
+/*Location pop up stuff*/
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+
+.leaflet-popup-close-button {
+  display: none; /* optional: hides the (x) close icon */
+}
+
+.custom-popup {
+  background-color: #252422;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-popup span{
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px !important;
+}
+
+.custom-popup button{
+  background: #fe621d;
+  width: 80%;
+  align-self: center;
+  height: 28px;
+  border-radius: 15px;
+  border: #000000 solid 2px;
+
+}
+
+.custom-popup button:last-child{
+  background: #fffcf2 !important;
+  border: #fe621d solid 2px; !important;
+}
+
+
+.auth-box {
+  width: 300px;
+  margin: 10% auto;
+  padding: 20px;
+  background-color: #252422;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  color: #ccc5b9;
+}
+
+.auth-box input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc5b9;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+}
+
+.auth-box input:focus {
+  border-color: #fe621d;
+  outline: none;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #fe621d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.auth-box button:hover {
+  background-color: #cc4f19;
+}
+
+.auth-box p {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #fe621d;
+  cursor: pointer;
+  user-select: none;
+}
+
+.auth-box p:hover {
+  text-decoration: underline;
+}
